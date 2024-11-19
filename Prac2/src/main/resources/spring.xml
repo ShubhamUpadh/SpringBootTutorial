@@ -5,9 +5,15 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id = "dev" class = "org.Prac2.Dev">
-
+<!--        <property name="age" value="12"/> -->
+        <constructor-arg value="14" />
+        <property name="laptop" ref="lap1" />
     </bean>
-    <bean id = "laptop" class = "org.Prac2.Laptop">
+
+    <bean id = "dev1" class = "org.Prac2.Dev">
+        <property name="age" value="12"/>
+    </bean>
+    <bean id = "lap1" class = "org.Prac2.Laptop">
 
     </bean>
 </beans>
