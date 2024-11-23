@@ -7,10 +7,14 @@
     <bean id = "dev" class = "org.Prac2.Dev">
     </bean>
 
-    <bean id = "dev1" class = "org.Prac2.Dev">
-        <property name="age" value="12"/>
+    <bean id = "dev1" class = "org.Prac2.Dev" autowire="byType">
+        <!--property name="com" ref="desk1" /-->
     </bean>
-    <bean id = "lap1" class = "org.Prac2.Laptop">
+    <bean id = "com1" class = "org.Prac2.Laptop" primary="true">
+
+    </bean>
+
+    <bean id = "com" class="org.Prac2.Desktop">
 
     </bean>
 </beans>

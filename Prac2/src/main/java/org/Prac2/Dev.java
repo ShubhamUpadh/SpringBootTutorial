@@ -5,11 +5,6 @@ public class Dev {
         System.out.println("Constructing");
     }
     public Computer com;
-    int age;
-
-    public Dev(int age) {
-        this.age = age;
-    }
 
     public Computer getCom() {
         return com;
@@ -17,14 +12,6 @@ public class Dev {
 
     public void setCom(Computer com) {
         this.com = com;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public void build(){
