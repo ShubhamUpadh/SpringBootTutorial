@@ -3,6 +3,7 @@ package com.Prac3.simpleWebApp.service;
 import com.Prac3.simpleWebApp.model.Product;
 import org.springframework.stereotype.Service;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -31,5 +32,28 @@ public class ProductService {
     public Product addProduct(Product prod) {
         products.add(prod);
         return prod;
+    }
+
+    public Product updateProduct(Product product) {
+        System.out.println("here @ service class");
+        for (Product prod : products){
+            if (prod.getProdID() == product.getProdID()){
+                prod.setProdName(product.getProdName());
+                prod.setPrice(product.getPrice());
+                return prod;
+            }
+        }
+        //return null;
+        return new Product(-1,"Not found",404);
+    }
+
+    public Product deleteProduct(int prodId) {
+        for (Product prod : products){
+            if (prod.getProdID() == prodId){
+                products.remove(prod);
+                return new Product(-1,"Removed",200);
+            }
+        }
+        return new Product(-1,"Not found",404);
     }
 }
