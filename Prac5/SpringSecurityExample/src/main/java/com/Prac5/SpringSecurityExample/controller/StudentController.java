@@ -1,8 +1,8 @@
-package com.Prac5.SpringSecurityExample;
+package com.Prac5.SpringSecurityExample.controller;
 
+import com.Prac5.SpringSecurityExample.model.Student;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.web.csrf.CsrfToken;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

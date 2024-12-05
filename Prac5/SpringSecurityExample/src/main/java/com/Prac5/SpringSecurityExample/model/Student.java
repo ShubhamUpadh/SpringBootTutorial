@@ -1,16 +1,13 @@
-package com.Prac5.SpringSecurityExample;
+package com.Prac5.SpringSecurityExample.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import java.lang.String;
 
 public class Student {
     private int id;
     private String name;
 
-    Student(int id, String name){
+    public Student(int id, String name){
         this.id = id;
         this.name = name;
     }
